@@ -18,16 +18,16 @@ app.use(express.static('public'));
 app.use(cors());
 
 mongoose.connect(config.databaseUrl, {
-  useNewUrlParser: true,
-  useCreateIndex: true,
-  useFindAndModify: false
+ useNewUrlParser: true,
+ useCreateIndex: true,
+ useFindAndModify: false
 }, (error) => {
-  if (error) {
-    console.error(error);
-  }
-  else {
-    console.info('Connect with database established');
-  }
+ if (error) {
+   console.error(error);
+ }
+ else {
+   console.info('Connect with database established');
+ }
 });
 
 process.on('SIGINT', () => {
